@@ -4,7 +4,7 @@ Movie Theater Seating Challenge 2020
 ## My assumptions and design
 - When making this project, I assumed that the theater enforced 2 public safety guidelines: *a 1 row buffer between seats* and *a 3 seat buffer between seats*
 - I then designed the seating arrangement to follow this assumption while also maximizing customer satisfaction
-- Given that the overall dimensions of the theater are 10 rows by 20 columns, after enforcing the public safety guidelines, there were only 25 seats available in the whole theater
+- Given that the overall dimensions of the theater are 10 rows by 20 columns, after enforcing the public safety guidelines, there are only 25 seats available in the whole theater.
   - A 3 seat buffer would remove 15 seats from a row entirely
   - 1 one row buffer reduces the available amount of rows by half, only leaving 5 rows
   - 5 rows times 5 seats per row, leaves 25 seats in total
