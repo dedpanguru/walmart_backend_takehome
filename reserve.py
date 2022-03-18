@@ -12,17 +12,19 @@ def reserve_group_in_same_row(num_seats_requested: int, reserved: int) -> tuple:
             tuple holding string representing reservations made, the amount of seats now reserved, and a boolean variable indicating success of the reservations
     """
     reservation, made_reservation = '', False
-    if num_seats_requested + reserved > 25: raise Exception
+    # insufficient space check
+    if num_seats_requested + reserved > 25: raise Exception()
     reserved += num_seats_requested
     for row in reversed(theater.keys()):
-        if theater[row].count(False) >= num_seats_requested:
+        if theater[row].count(False) >= num_seats_requested: # if row can accomadate request
+            # begin reserving seats
             seat_num = theater[row].index(False)
             while seat_num <= len(theater[row])-1 and num_seats_requested >0:
                 theater[row][seat_num] = True
                 reservation += f'{row}{4*seat_num+2} '
                 seat_num+=1
                 num_seats_requested-=1
-            made_reservation = True
+            made_reservation = True # reservation was successful
     return reservation, reserved, made_reservation
 
 def reserve_individual(num_seats_requested:int, reserved: int) -> tuple:
@@ -64,6 +66,7 @@ def main():
         num_seats_requested = int(request[1])
         # try to reserve seats
         try:
+            if num_seats_requested <= 0 or reserved==25: raise Exception()
             # prioritize grouping in the same row
             reservation, reserved, worked = reserve_group_in_same_row(num_seats_requested,reserved)
             if not worked: # the request cannot be grouped in the same row, reservation = '' on failure
