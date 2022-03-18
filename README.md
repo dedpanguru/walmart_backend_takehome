@@ -20,7 +20,7 @@ Movie Theater Seating Challenge 2020
 - valid cases would reserve seats up to 25
 - invalid cases would reserve seats above 25 or send invalid input
 - tests are found in the testing directory
-  - run each test by running `python3 reserve.py ./testing/<input_test_file>` and then taking a look at the generated output file.  
+  - run each test by running `python3 reserve.py ./testing/<input_test_file>` and then taking a look at the generated output file or the console.  
 
 ## How to run
 - This program takes **up to 2** command-line arguments: an *input file path* and a *output file path*
