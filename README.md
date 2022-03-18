@@ -8,7 +8,7 @@ Movie Theater Seating Challenge 2020
   - A 3 seat buffer would remove 15 seats from a row entirely
   - 1 one row buffer reduces the available amount of rows by half, only leaving 5 rows
   - 5 rows times 5 seats per row, leaves 25 seats in total
-- Finally, I assumed that on an unfullfillable request , the program would not stop running (as one bad request shouldn't crash the whole system) but instead return a request rejection message.  
+- Finally, I assumed that on an unfullfillable request , the program would not stop running (as one bad request shouldn't crash the whole system) but instead return a request rejection message. Only accepted requests will be outputted into the output file. 
 
 ## Priorities
 - To maximize customer satisfaction, I implemented a first-come first-serve based seat allocation system, where back row and middle seats were granted to requests that came earlier than others. 
