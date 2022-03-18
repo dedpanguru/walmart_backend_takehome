@@ -63,6 +63,7 @@ def main():
     # scan each line in the input file
     for line in in_file.readlines():
         request = line.split()
+        if not request[1].isnumeric(): continue
         num_seats_requested = int(request[1])
         # try to reserve seats
         try:
